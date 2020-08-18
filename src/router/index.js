@@ -29,7 +29,7 @@ const routes = [
     path: "/register",
     name: "Register",
     component: () =>
-      import(/* webpackChunkName: "register" */ "../views/Register.vue")
+      import(/* webpackChunkName: "register" */ "../views/Volunteers.vue")
   },
 
 //routes ngos only
