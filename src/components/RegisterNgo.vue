@@ -157,11 +157,13 @@ export default {
 
       //fetch("http://localhost:8000/api/ngo", requestOptions)
       fetch("https://helpinghand-laravel.herokuapp.com/api/ngo", requestOptions)
-      .then(response => console.log(response.status))
+       .then(() => {
+         this.$router.push({name:"LoginN"});
+       })
+      //.then(response => console.log(response.status))
        // .then(json => console.log(json))
         //.then(result => (this.validation = result["message"]))
         .catch(error => console.log("error", error));
-
     }
   }
 };

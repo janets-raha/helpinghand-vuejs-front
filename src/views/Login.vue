@@ -1,6 +1,6 @@
 <template>
   <div class="login">
-    <img alt="Vue logo" src="../assets/logo.png" />
+    <img alt="HelpingHand logo" src="../assets/logo.jpeg" />
     <LoginUser msg="Welcome to Your Vue.js App" />
   </div>
 </template>
