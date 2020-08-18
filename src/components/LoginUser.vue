@@ -48,7 +48,7 @@ export default {
       };
 
       //fetch("http://localhost:8000/api/login", requestOptions)
-      fetch("http://helpinghand-laravel.herokuapp.com/api/login", requestOptions)
+      fetch("https://helpinghand-laravel.herokuapp.com/api/login", requestOptions)
         .then(response => {
           localStorage.setItem("token", response.data);
           this.$router.push({name: "Profile"})
