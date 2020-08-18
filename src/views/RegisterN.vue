@@ -1,6 +1,5 @@
 <template>
   <div class="registern">
-    <img alt="Vue logo" src="../assets/logo.png" />
     <RegisterNgo msg="Create your account and recruit qualified passionates volunteers for your missions" />
   </div>
 </template>

@@ -6,6 +6,9 @@
         class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2"
       >
         <div class="bg-white px-6 py-8 rounded shadow-md text-black w-full">
+          <p>
+            You are an NGO and need expert help with a specific project? If so then advertise on this platform to find those special people. It might be that you don't need specific expertise, you simply need an extra pair of hands to provide general help and support at a rescue shelter, for example. That’s fine, as there are many compassionate people who would jump at the opportunity to help you.
+          </p>
           <h1 class="mb-8 text-3xl text-center">
             Sign up and find volunteers for your missions
           </h1>
@@ -13,8 +16,8 @@
             <input
               type="text"
               class="block border border-grey-light w-full p-3 rounded mb-4"
-              name="ngo_name"
-              v-model="ngo_name"
+              name="name"
+              v-model="name"
               placeholder="Ngo-Name"
             />
 
@@ -111,7 +114,7 @@ export default {
   },
   data() {
     return {
-      ngo_name: "",
+      name: "",
       description: "",
       phone: "",
       email: "",
@@ -135,7 +138,7 @@ export default {
 
 
       var raw = JSON.stringify({
-        ngo_name: this.ngo_name,
+        name: this.name,
         description: this.description,
         phone: this.phone,
         email: this.email,
@@ -152,8 +155,9 @@ export default {
         redirect: "follow"
       };
 
-      fetch("http://localhost:8000/api/ngo", requestOptions)
-        .then(response => console.log(response.status))
+      //fetch("http://localhost:8000/api/ngo", requestOptions)
+      fetch("https://helpinghand-laravel.herokuapp.com/api/ngo", requestOptions)
+      .then(response => console.log(response.status))
        // .then(json => console.log(json))
         //.then(result => (this.validation = result["message"]))
         .catch(error => console.log("error", error));

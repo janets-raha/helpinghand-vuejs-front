@@ -45,7 +45,8 @@ export default {
         redirect: "follow"
       };
 
-      fetch("http://localhost:8000/api/login-ngo", requestOptions)
+      //fetch("http://localhost:8000/api/login-ngo", requestOptions)
+      fetch("https://helpinghand-laravel.herokuapp.com/api/login-ngo", requestOptions)
         .then(response => {
           if(response.status !== 200) {
             this.$router.push({ name: "Show"})
