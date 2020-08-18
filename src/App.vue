@@ -3,8 +3,8 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
-      <router-link to="/register">Become a volunteer</router-link> |
-      <router-link to="/register-ngo">Recruit Volunteers</router-link> |
+      <router-link to="/volunteers">Become a volunteer</router-link> |
+      <router-link to="/ngos">Recruit Volunteers</router-link> |
 
     </div>
     <router-view />

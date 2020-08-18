@@ -157,25 +157,6 @@ export default {
        // .then(json => console.log(json))
         //.then(result => (this.validation = result["message"]))
         .catch(error => console.log("error", error));
-    
-      /*fetch('http://localhost:8000/api/ngo', requestOptions)
-        .then(
-          function(response) {
-            if (response.status !== 200) {
-              console.log('Looks like there was a problem. Status Code: ' +
-                response.status);
-              return;
-            }
-
-            // Examine the text in the response
-            response.json().then(function(data) {
-              console.log(data);
-            });
-          }
-        )
-        .catch(function(err) {
-          console.log('Fetch Error :-S', err);
-        });*/
 
     }
   }

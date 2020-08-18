@@ -26,10 +26,10 @@ const routes = [
       import(/* webpackChunkName: "login" */ "../views/Login.vue")
   },
   {
-    path: "/register",
+    path: "/volunteers",
     name: "Register",
     component: () =>
-      import(/* webpackChunkName: "register" */ "../views/Volunteers.vue")
+      import(/* webpackChunkName: "volunteers" */ "../views/Volunteers.vue")
   },
 
 //routes ngos only
@@ -41,7 +41,7 @@ const routes = [
       import(/* webpackChunkName: "loginn" */ "../views/LoginN.vue")
   },
   {
-    path: "/register-ngo",
+    path: "/ngos",
     name: "RegisterN",
     component: () =>
       import(/* webpackChunkName: "registern" */ "../views/RegisterN.vue")

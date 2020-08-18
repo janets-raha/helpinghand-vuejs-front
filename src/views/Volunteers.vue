@@ -1,6 +1,6 @@
 <template>
-  <div class="register">
-    <img alt="Vue logo" src="../assets/logo.png" />
+  <div class="volunteers">
+    <img alt="image of group of volunteers" src="../assets/helpinghandHP.jpeg" />
     <RegisterUser msg="Welcome to Your Vue.js App" />
   </div>
 </template>
@@ -10,7 +10,7 @@
 import RegisterUser from "@/components/RegisterUser.vue";
 
 export default {
-  name: "Register",
+  name: "Volunteers",
   components: {
     RegisterUser
   }
