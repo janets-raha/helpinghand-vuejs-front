@@ -8,6 +8,9 @@
       <b-navbar-nav>
         <b-nav-item to="/">Home</b-nav-item>
         <b-nav-item to="/about">About</b-nav-item>
+        <b-nav-item to="/registeruser">Volunteers</b-nav-item>
+        <b-nav-item to="/ngos">Ngos</b-nav-item>
+        <b-nav-item to="/ngos"></b-nav-item>
       </b-navbar-nav>
 
         <b-nav-item-dropdown right>

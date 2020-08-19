@@ -1,14 +1,12 @@
 <template>
   <b-container>
+    <img alt="HelpHandImage" src="../assets/helpinghandHP.jpeg" />
+    <HelloWorld msg="Welcome to the Helping Hand Platform" />
     <b-row align-v="center">
       <mission-card></mission-card>
       <mission-card></mission-card>
       <mission-card></mission-card>
       <mission-card></mission-card>
-  <!--<div class="home">-->
-    <img alt="HelpHandImage" src="../assets/helpinghandHP.jpeg" />
-    <HelloWorld msg="Welcome to the Helping Hand Platform" />
-  <!--</div>-->
     </b-row>
   </b-container>
 </template>
