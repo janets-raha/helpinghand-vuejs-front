@@ -19,8 +19,8 @@ export default {
   name: "LoginNgo",
   data() {
     return {
-        email: "",
-        password: ""
+      email: "",
+      password: ""
     };
   },
 
@@ -46,17 +46,20 @@ export default {
       };
 
       //fetch("http://localhost:8000/api/login-ngo", requestOptions)
-      fetch("https://helpinghand-laravel.herokuapp.com/api/login-ngo", requestOptions)
+      fetch(
+        "https://helpinghand-laravel.herokuapp.com/api/login-ngo",
+        requestOptions
+      )
         .then(response => {
-          if(response.status !== 200) {
-            this.$router.push({ name: "Show"})
-            console.log("mon kiki")
+          if (response.status !== 200) {
+            this.$router.push({ name: "Show" });
+            console.log("mon kiki");
           }
         })
         .then(json => console.log(json))
         //.then(result => (this.validation = result["message"]))
-        .catch(error => console.log("error", error))
+        .catch(error => console.log("error", error));
     }
   }
-}
+};
 </script>

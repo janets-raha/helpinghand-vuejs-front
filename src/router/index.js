@@ -26,13 +26,13 @@ const routes = [
       import(/* webpackChunkName: "login" */ "../views/Login.vue")
   },
   {
-    path: "/volunteers",
-    name: "Register",
+    path: "/registeruser",
+    name: "RegisterUser",
     component: () =>
-      import(/* webpackChunkName: "volunteers" */ "../views/Volunteers.vue")
+      import(/* webpackChunkName: "volunteers" */ "../views/RegisterUser.vue")
   },
 
-//routes ngos only
+  //routes ngos only
 
   {
     path: "/login-ngo",
@@ -51,10 +51,9 @@ const routes = [
     name: "Profile",
     component: () =>
       import(/* webpackChunkName: "profile" */ "../views/Profile.vue")
-  },
+  }
 
-    //routes missions only
-
+  //routes missions only
 ];
 
 const router = new VueRouter({

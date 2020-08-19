@@ -97,7 +97,7 @@
 
 <script>
 export default {
-  name: "Register",
+  name: "RegisterUserForm",
   props: {
     msg: String
   },
@@ -124,7 +124,6 @@ export default {
       myHeaders.append("Content-Type", "application/json");
       myHeaders.append("Accept", "application/json");
 
-
       var raw = JSON.stringify({
         name: this.name,
         phone: this.phone,
@@ -142,17 +141,16 @@ export default {
         redirect: "follow"
       };
 
-      //fetch("http://localhost:8000/api/user", requestOptions)
-      fetch("https://helpinghand-laravel.herokuapp.com/api/user", requestOptions)
-       .then(() => {
-         this.$router.push({name:"Login"});
-       })
-       
-       //.then(response => console.log(response.status))
-       // .then(json => console.log(json))
+      //fetch("http://localhost:8000/api/registeruser", requestOptions)
+      fetch("https://helpinghand-laravel.herokuapp.com/api/registeruser",requestOptions)
+        .then(() => {
+          this.$router.push({ name: "Login" });
+        })
+
+        //.then(response => console.log(response.status))
+        // .then(json => console.log(json))
         //.then(result => (this.validation = result["message"]))
         .catch(error => console.log("error", error));
-
     }
   }
 };

@@ -1,7 +1,9 @@
 <template>
   <div class="registern">
     <img alt="HelpingHand logo" src="../assets/logo.jpeg" />
-    <RegisterNgo msg="Create your account and recruit qualified passionates volunteers for your missions" />
+    <RegisterNgo
+      msg="Create your account and recruit qualified passionates volunteers for your missions"
+    />
   </div>
 </template>
 

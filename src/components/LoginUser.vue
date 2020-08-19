@@ -19,9 +19,9 @@ export default {
   name: "LoginUser",
   data() {
     return {
-        email: "",
-        password: "",
-        device_name: "browser"
+      email: "",
+      password: "",
+      device_name: "accesstoken"
     };
   },
 
@@ -30,33 +30,34 @@ export default {
 
     login() {
       console.log("registration method has been called");
-      var myHeaders = new Headers();
+      const myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
       myHeaders.append("Accept", "application/json");
 
-      var raw = JSON.stringify({
+      const raw = JSON.stringify({
         email: this.email,
         password: this.password,
-        device_name:this.device_name
+        device_name: this.device_name
       });
 
-      var requestOptions = {
+      const requestOptions = {
         method: "POST",
         headers: myHeaders,
         body: raw,
-        redirect: "follow"
+        //redirect: "follow"
       };
 
       //fetch("http://localhost:8000/api/login", requestOptions)
       fetch("https://helpinghand-laravel.herokuapp.com/api/login", requestOptions)
-        .then(response => {
-          localStorage.setItem("token", response.data);
-          this.$router.push({name: "Profile"})
+        .then(response => response.text())
+        .then(data => {
+          //console.log(data);
+          //this.$root.$emit("login", true);
+          localStorage.setItem("token", data);
+          this.$router.push({ name: "Profile" });
         })
-        .then(json => console.log(json))
-        //.then(result => (this.validation = result["message"]))
-        .catch(error => console.log("error", error))
+        .catch(error => console.log("error", error));
     }
   }
-}
+};
 </script>
