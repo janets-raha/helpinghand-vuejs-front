@@ -141,8 +141,8 @@ export default {
         redirect: "follow"
       };
 
-      //fetch("http://localhost:8000/api/registeruser", requestOptions)
-      fetch("https://helpinghand-laravel.herokuapp.com/api/registeruser",requestOptions)
+      fetch("http://localhost:8000/api/registeruser", requestOptions)
+      //fetch("https://helpinghand-laravel.herokuapp.com/api/registeruser",requestOptions)
         .then(() => {
           this.$router.push({ name: "Login" });
         })

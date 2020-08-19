@@ -47,8 +47,8 @@ export default {
         //redirect: "follow"
       };
 
-      //fetch("http://localhost:8000/api/login", requestOptions)
-      fetch("https://helpinghand-laravel.herokuapp.com/api/login", requestOptions)
+      fetch("http://localhost:8000/api/login", requestOptions)
+      //fetch("https://helpinghand-laravel.herokuapp.com/api/login", requestOptions)
         .then(response => response.text())
         .then(data => {
           //console.log(data);
