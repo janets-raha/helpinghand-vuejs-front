@@ -1,21 +1,13 @@
 <template>
-  <div class="register mb-24">
+  <div class="edit mb-24">
     <!-- component -->
     <div class="bg-grey-lighter min-h-screen flex flex-col">
       <div
         class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2"
       >
-        <div class="bg-white px-6 py-8 rounded shadow-md text-black w-full">
-          <p>
-            You are an NGO and need expert help with a specific project? If so
-            then advertise on this platform to find those special people. It
-            might be that you don't need specific expertise, you simply need an
-            extra pair of hands to provide general help and support at a rescue
-            shelter, for example. That’s fine, as there are many compassionate
-            people who would jump at the opportunity to help you.
-          </p>
+        <div class="bg-white px-6 py-8 rounded shadow-md text-black w-full" v-if="user">
           <h1 class="mb-8 text-3xl text-center">
-            Sign up and find volunteers for your missions
+            Update your profile
           </h1>
           <form v-on:submit.prevent="onSubmit">
             <input
@@ -23,15 +15,7 @@
               class="block border border-grey-light w-full p-3 rounded mb-4"
               name="name"
               v-model="name"
-              placeholder="Ngo-Name"
-            />
-
-            <input
-              type="text"
-              class="block border border-grey-light w-full p-3 rounded mb-4"
-              name="description"
-              v-model="description"
-              placeholder="Description"
+              placeholder="{{user.name}}"
             />
 
             <input
@@ -39,7 +23,7 @@
               class="block border border-grey-light w-full p-3 rounded mb-4"
               name="phone"
               v-model="phone"
-              placeholder="Phone"
+              placeholder="{{user.phone}}"
             />
 
             <input
@@ -47,7 +31,7 @@
               class="block border border-grey-light w-full p-3 rounded mb-4"
               name="email"
               v-model="email"
-              placeholder="Email"
+              placeholder="{{user.email}}"
             />
 
             <input
@@ -55,14 +39,14 @@
               class="block border border-grey-light w-full p-3 rounded mb-4"
               name="password"
               v-model="password"
-              placeholder="Password"
+              placeholder="{{user.password}}"
             />
             <input
               type="password"
               class="block border border-grey-light w-full p-3 rounded mb-4"
               name="confirm_password"
               v-model="confirm_password"
-              placeholder="Confirm Password"
+              placeholder="{{user.confirm_password}}"
             />
             <small v-if="this.password !== this.confirm_password"
               >The confirmation has to be identic to the password</small
@@ -73,7 +57,7 @@
               class="block border border-grey-light w-full p-3 rounded mb-4"
               name="postalcode"
               v-model="postalcode"
-              placeholder="Postal code"
+              placeholder="{{user.postalcode}}"
             />
 
             <input
@@ -81,7 +65,7 @@
               class="block border border-grey-light w-full p-3 rounded mb-4"
               name="city"
               v-model="city"
-              placeholder="City"
+              placeholder="{{user.city}}"
             />
 
             <button
@@ -99,12 +83,6 @@
             class="text-center bg-green-200 rounded text-green-700 border border-green-700 mt-2 "
           ></div>-->
 
-          <div class=" mt-6">
-            Already have an account?
-            <router-link class="text-green-600" to="/login-ngo">
-              Login
-            </router-link>
-          </div>
         </div>
       </div>
     </div>
@@ -113,14 +91,13 @@
 
 <script>
 export default {
-  name: "RegisterN",
+  name: "EditUserForm",
   props: {
     msg: String
   },
   data() {
     return {
       name: "",
-      description: "",
       phone: "",
       email: "",
       password: "",
@@ -143,7 +120,6 @@ export default {
 
       var raw = JSON.stringify({
         name: this.name,
-        description: this.description,
         phone: this.phone,
         email: this.email,
         password: this.password,
@@ -159,11 +135,12 @@ export default {
         redirect: "follow"
       };
 
-      //fetch("http://localhost:8000/api/ngo", requestOptions)
-      fetch("https://helpinghand-laravel.herokuapp.com/api/ngo", requestOptions)
+      fetch("http://localhost:8000/", requestOptions)
+      //fetch("https://helpinghand-laravel.herokuapp.com/api/updateuser",requestOptions)
         .then(() => {
-          this.$router.push({ name: "LoginN" });
+          this.$router.push({ name: "Profile" });
         })
+
         //.then(response => console.log(response.status))
         // .then(json => console.log(json))
         //.then(result => (this.validation = result["message"]))

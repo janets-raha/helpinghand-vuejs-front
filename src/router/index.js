@@ -36,15 +36,15 @@ const routes = [
 
   {
     path: "/login-ngo",
-    name: "LoginN",
+    name: "LoginNgo",
     component: () =>
-      import(/* webpackChunkName: "loginn" */ "../views/LoginN.vue")
+      import(/* webpackChunkName: "loginngo" */ "../views/LoginNgo.vue")
   },
   {
     path: "/ngos",
-    name: "RegisterN",
+    name: "RegisterNgo",
     component: () =>
-      import(/* webpackChunkName: "registern" */ "../views/RegisterN.vue")
+      import(/* webpackChunkName: "registerngo" */ "../views/RegisterNgo.vue")
   },
   {
     path: "/profile",

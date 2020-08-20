@@ -1,18 +1,18 @@
 <template>
-  <div class="loginn">
+  <div class="loginngo">
     <img alt="Helpinghand logo" src="../assets/logo.jpeg" />
-    <LoginNgo msg="Welcome to Your Vue.js App" />
+    <LoginNgoForm msg="Welcome to Your Vue.js App" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import LoginNgo from "@/components/LoginNgo.vue";
+import LoginNgoForm from "@/components/LoginNgoForm.vue";
 
 export default {
-  name: "LoginN",
+  name: "LoginNgo",
   components: {
-    LoginNgo
+    LoginNgoForm
   }
 };
 </script>

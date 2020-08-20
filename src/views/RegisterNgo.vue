@@ -1,7 +1,7 @@
 <template>
-  <div class="registern">
+  <div class="registerngo">
     <img alt="HelpingHand logo" src="../assets/logo.jpeg" />
-    <RegisterNgo
+    <RegisterNgoForm
       msg="Create your account and recruit qualified passionates volunteers for your missions"
     />
   </div>
@@ -9,12 +9,12 @@
 
 <script>
 // @ is an alias to /src
-import RegisterNgo from "@/components/RegisterNgo.vue";
+import RegisterNgoForm from "@/components/RegisterNgoForm.vue";
 
 export default {
-  name: "RegisterN",
+  name: "RegisterNgo",
   components: {
-    RegisterNgo
+    RegisterNgoForm
   }
 };
 </script>

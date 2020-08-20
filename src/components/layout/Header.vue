@@ -1,6 +1,6 @@
 <template>
   <b-navbar toggleable="lg" type="dark" variant="info">
-    <b-navbar-brand href="/"><img src="https://placekitten.com/g/30/30" alt="Kitten"></b-navbar-brand>
+    <b-navbar-brand href="/"><img src="" alt="Logo HelpingHand" /></b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -10,7 +10,6 @@
         <b-nav-item to="/about">About</b-nav-item>
         <b-nav-item to="/registeruser">Volunteers</b-nav-item>
         <b-nav-item to="/ngos">Ngos</b-nav-item>
-        <b-nav-item to="/ngos"></b-nav-item>
       </b-navbar-nav>
 
         <b-nav-item-dropdown right>
@@ -18,7 +17,7 @@
           <template v-slot:button-content>
             <em>User</em>
           </template>
-          <b-dropdown-item href="#">Profile</b-dropdown-item>
+          <b-dropdown-item href="/profile">Profile</b-dropdown-item>
           <b-dropdown-item href="#">Sign Out</b-dropdown-item>
         </b-nav-item-dropdown>
     </b-collapse>

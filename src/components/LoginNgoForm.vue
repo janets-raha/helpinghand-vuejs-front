@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: "LoginNgo",
+  name: "LoginNgoForm",
   data() {
     return {
       email: "",
@@ -46,14 +46,10 @@ export default {
       };
 
       //fetch("http://localhost:8000/api/login-ngo", requestOptions)
-      fetch(
-        "https://helpinghand-laravel.herokuapp.com/api/login-ngo",
-        requestOptions
-      )
+      fetch("https://helpinghand-laravel.herokuapp.com/api/login-ngo", requestOptions)
         .then(response => {
           if (response.status !== 200) {
-            this.$router.push({ name: "Show" });
-            console.log("mon kiki");
+            //this.$router.push({ name: "Show" });
           }
         })
         .then(json => console.log(json))
