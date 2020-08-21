@@ -70,7 +70,7 @@
 
             <button
               type="submit"
-              class="w-full text-center py-3 rounded bg-green-500 text-white hover:bg-green-dark focus:outline-none my-1"
+              class="w-full text-center py-3 rounded bg-green-500 text-black hover:bg-green-dark focus:outline-none my-1"
             >
               Create Account
             </button>
@@ -142,7 +142,7 @@ export default {
       };
 
       //fetch("http://localhost:8000/api/user", requestOptions)
-      fetch("https://helpinghand-laravel.herokuapp.com/api/user",requestOptions)
+        fetch("https://helpinghand-laravel.herokuapp.com/api/user",requestOptions)
         .then(() => {
           this.$router.push({ name: "Login" });
         })

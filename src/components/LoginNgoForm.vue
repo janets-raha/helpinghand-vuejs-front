@@ -41,20 +41,30 @@ export default {
       var requestOptions = {
         method: "POST",
         headers: myHeaders,
-        body: raw,
-        redirect: "follow"
+        body: raw
+        // redirect: "follow"
       };
 
       //fetch("http://localhost:8000/api/login-ngo", requestOptions)
-      fetch("https://helpinghand-laravel.herokuapp.com/api/login-ngo", requestOptions)
-        .then(response => {
+        fetch("https://helpinghand-laravel.herokuapp.com/api/login-ngo", requestOptions)
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+          this.$root.$emit("loginngo", true);
+          localStorage.setItem("token", data[0]);
+          localStorage.setItem("id", data[1]);
+          this.$router.push({ name: "ProfileNgo" });
+        })
+        .catch(error => console.log("error", error));
+
+      /* .then(response => {
           if (response.status !== 200) {
-            //this.$router.push({ name: "Show" });
+            //this.$router.push({ name: "ProfileNgo" });
           }
         })
         .then(json => console.log(json))
         //.then(result => (this.validation = result["message"]))
-        .catch(error => console.log("error", error));
+        .catch(error => console.log("error", error));*/
     }
   }
 };

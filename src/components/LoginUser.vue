@@ -43,17 +43,17 @@ export default {
       const requestOptions = {
         method: "POST",
         headers: myHeaders,
-        body: raw,
-        //redirect: "follow"
+        body: raw
       };
 
       //fetch("http://localhost:8000/api/login", requestOptions)
-      fetch("https://helpinghand-laravel.herokuapp.com/api/login", requestOptions)
-        .then(response => response.text())
+        fetch("https://helpinghand-laravel.herokuapp.com/api/login", requestOptions)
+        .then(response => response.json())
         .then(data => {
-          //console.log(data);
-          //this.$root.$emit("login", true);
-          localStorage.setItem("token", data);
+          console.log(data);
+          this.$root.$emit("login", true);
+          localStorage.setItem("token", data[0]);
+          localStorage.setItem("id", data[1]);
           this.$router.push({ name: "Profile" });
         })
         .catch(error => console.log("error", error));

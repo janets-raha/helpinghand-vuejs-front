@@ -51,6 +51,24 @@ const routes = [
     name: "Profile",
     component: () =>
       import(/* webpackChunkName: "profile" */ "../views/Profile.vue")
+  },
+  {
+    path: "/profilengo",
+    name: "ProfileNgo",
+    component: () =>
+      import(/* webpackChunkName: "profilengo" */ "../views/ProfileNgo.vue")
+  },
+  {
+    path: "/edituser",
+    name: "EditUser",
+    component: () =>
+      import(/* webpackChunkName: "edituser" */ "../views/EditUser.vue")
+  },
+  {
+    path: "/createmission",
+    name: "Mission",
+    component: () =>
+      import(/* webpackChunkName: "mission" */ "../views/Mission.vue")
   }
 
   //routes missions only

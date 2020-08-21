@@ -86,7 +86,7 @@
 
             <button
               type="submit"
-              class="w-full text-center py-3 rounded bg-green-500 text-white hover:bg-green-dark focus:outline-none my-1"
+              class="w-full text-center py-3 rounded bg-green-500 text-black hover:bg-green-dark focus:outline-none my-1"
             >
               Create Account
             </button>
@@ -113,7 +113,7 @@
 
 <script>
 export default {
-  name: "RegisterN",
+  name: "RegisterNgoForm",
   props: {
     msg: String
   },
@@ -160,7 +160,7 @@ export default {
       };
 
       //fetch("http://localhost:8000/api/ngo", requestOptions)
-      fetch("https://helpinghand-laravel.herokuapp.com/api/ngo", requestOptions)
+        fetch("https://helpinghand-laravel.herokuapp.com/api/ngo", requestOptions)
         .then(() => {
           this.$router.push({ name: "LoginNgo" });
         })
