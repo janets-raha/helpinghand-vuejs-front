@@ -12,6 +12,8 @@
         <b-nav-item to="/about">About</b-nav-item>
         <b-nav-item to="/registeruser">Volunteers</b-nav-item>
         <b-nav-item to="/ngos">Ngos</b-nav-item>
+        <b-nav-item to="/createmission"></b-nav-item>
+
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -23,6 +25,8 @@
           <router-link to="/about">About</router-link> |
           <router-link to="/volunteers">Become a volunteer</router-link> |
           <router-link to="/ngos">Recruit Volunteers</router-link>
+          <router-link to="/createmission">Create Mission</router-link>
+
       </div>
     </div>
   </header>-->

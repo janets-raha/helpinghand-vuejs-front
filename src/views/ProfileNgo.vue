@@ -10,7 +10,7 @@
       <p>{{ ngo.city }}</p>
     </div>
     <div>
-      <b-button variant="success" href="/createmission"
+      <b-button variant="success" to="/createmission"
         >Add a new mission</b-button
       >
     </div>

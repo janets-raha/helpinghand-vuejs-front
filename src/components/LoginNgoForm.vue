@@ -20,7 +20,8 @@ export default {
   data() {
     return {
       email: "",
-      password: ""
+      password: "",
+      device_name: "accesstoken"
     };
   },
 
@@ -35,18 +36,18 @@ export default {
 
       var raw = JSON.stringify({
         email: this.email,
-        password: this.password
+        password: this.password,
+        device_name: this.device_name
       });
 
       var requestOptions = {
         method: "POST",
         headers: myHeaders,
         body: raw
-        // redirect: "follow"
       };
 
       //fetch("http://localhost:8000/api/login-ngo", requestOptions)
-        fetch("https://helpinghand-laravel.herokuapp.com/api/login-ngo", requestOptions)
+      fetch("https://helpinghand-laravel.herokuapp.com/api/login-ngo", requestOptions)
         .then(response => response.json())
         .then(data => {
           console.log(data);

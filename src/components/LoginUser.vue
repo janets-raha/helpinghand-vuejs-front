@@ -47,7 +47,7 @@ export default {
       };
 
       //fetch("http://localhost:8000/api/login", requestOptions)
-        fetch("https://helpinghand-laravel.herokuapp.com/api/login", requestOptions)
+      fetch("https://helpinghand-laravel.herokuapp.com/api/login", requestOptions)
         .then(response => response.json())
         .then(data => {
           console.log(data);

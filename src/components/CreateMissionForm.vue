@@ -75,7 +75,7 @@
 
             <button
               type="submit"
-              class="w-full text-center py-3 rounded bg-green-500 text-white hover:bg-green-dark focus:outline-none my-1"
+              class="w-full text-center py-3 rounded bg-green-500 text-black hover:bg-green-dark focus:outline-none my-1"
             >
               Create Mission
             </button>
@@ -98,6 +98,7 @@ export default {
       description: "",
       skills: "",
       availability: "",
+      date_time: "",
       postalcode: "",
       city: ""
     };
@@ -118,6 +119,7 @@ export default {
         description: this.description,
         skills: this.skills,
         availability: this.availability,
+        date_time: this.date_time,
         postalcode: this.postalcode,
         city: this.city
       });
@@ -129,8 +131,8 @@ export default {
         redirect: "follow"
       };
 
-      fetch("http://localhost:8000/api/mission", requestOptions)
-        //fetch("https://helpinghand-laravel.herokuapp.com/api/mission", requestOptions)
+      //fetch("http://localhost:8000/api/mission", requestOptions)
+      fetch("https://helpinghand-laravel.herokuapp.com/api/mission", requestOptions)
         .then(() => {
           this.$router.push({ name: "ProfileNgo" });
         })

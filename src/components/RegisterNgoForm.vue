@@ -160,7 +160,7 @@ export default {
       };
 
       //fetch("http://localhost:8000/api/ngo", requestOptions)
-        fetch("https://helpinghand-laravel.herokuapp.com/api/ngo", requestOptions)
+      fetch("https://helpinghand-laravel.herokuapp.com/api/ngo", requestOptions)
         .then(() => {
           this.$router.push({ name: "LoginNgo" });
         })

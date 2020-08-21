@@ -137,8 +137,8 @@ export default {
         redirect: "follow"
       };
 
-      fetch("http://localhost:8000/", requestOptions)
-        //fetch("https://helpinghand-laravel.herokuapp.com/api/user/{user}",requestOptions)
+      //fetch("http://localhost:8000/", requestOptions)
+      fetch("https://helpinghand-laravel.herokuapp.com/api/user/{user}",requestOptions)
         .then(() => {
           this.$router.push({ name: "Profile" });
         })
